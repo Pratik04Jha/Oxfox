@@ -1,5 +1,6 @@
-import Navbar from "@/components/Navbar";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Sidebar from "@/components/Sidebar";
 
 export const metadata = {
   title: "Oxfox",
@@ -10,7 +11,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <Navbar />
-      <body className="bg-zinc-900">{children}</body>
+      <Sidebar />
+      <body className="bg-zinc-900 ml-65">{children}</body>
     </html>
   );
 }

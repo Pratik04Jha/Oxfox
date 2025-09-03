@@ -37,7 +37,7 @@ export default function ChatForm({ onSubmit, isPending }) {
   }, [prompt]);
 
   return (
-    <div className="fixed bottom-0 left-0 w-full bg-zinc-900 z-1000 px-4 py-3">
+    <div className="fixed bottom-0 left-0 w-full bg-zinc-900 z-1000 px-4 py-3 pl-65">
       <form
         onSubmit={handleSubmit}
         className="max-w-3xl mx-auto flex items-end border-1 border-zinc-700/50 rounded-4xl bg-zinc-800 px-4 "
