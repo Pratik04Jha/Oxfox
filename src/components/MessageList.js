@@ -10,7 +10,7 @@ export default function MessageList({ messages }) {
     if (endRef.current) {
       endRef.current.scrollIntoView({ behavior: "smooth" });
     }
-  }, [messages]); // Runs every time messages change
+  }, [messages]); 
 
   return (
     <div className="flex flex-col gap-3 p-4 w-full pb-34 overflow-y-auto max-h-screen">
@@ -60,7 +60,6 @@ export default function MessageList({ messages }) {
               </motion.div>
             ))}
 
-            {/* Dummy div to scroll to */}
             <div ref={endRef}></div>
           </motion.div>
         )}

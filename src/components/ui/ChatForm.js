@@ -27,7 +27,6 @@ export default function ChatForm({ isCollapsed }) {
     }
   };
 
-  // Handle Enter (send) and Shift+Enter (new line)
   const handleKeyDown = (e) => {
     if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault();
@@ -42,7 +41,7 @@ export default function ChatForm({ isCollapsed }) {
   return (
     <div
       className={`fixed bottom-0 left-0 w-full bg-zinc-900 z-1000 px-4 py-3 transition-all duration-300 ease-in-out ${
-        isCollapsed ? "pl-[65px]" : "pl-64"
+        isCollapsed ? "pl-20" : "pl-64"
       }`}
     >
       <form

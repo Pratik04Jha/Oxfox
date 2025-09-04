@@ -8,7 +8,7 @@ import ChatForm from "../components/ui/ChatForm";
 import { ChatProvider } from "@/context/ChatContext"; // Import the provider
 
 export default function RootLayout({ children }) {
-  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
+  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(true);
 
   const toggleSidebar = () => {
     setIsSidebarCollapsed(!isSidebarCollapsed);
@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
         <Sidebar isCollapsed={isSidebarCollapsed} toggleSidebar={toggleSidebar} />
         <body
           className={`bg-zinc-900 transition-all duration-300 ease-in-out ${
-            isSidebarCollapsed ? "ml-[65px]" : "ml-64"
+            isSidebarCollapsed ? "ml-15" : "ml-64"
           }`}
         >
           {children}
