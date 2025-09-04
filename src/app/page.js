@@ -1,15 +1,13 @@
 "use client";
 
-import ChatForm from "@/components/ui/ChatForm";
 import MessageList from "@/components/MessageList";
-import { useChat } from "@/hooks/useChat";
+import { useChatContext } from "@/context/ChatContext";
 
 export default function Chat() {
-  const { messages, isPending, sendMessage } = useChat();
+  const { messages } = useChatContext();
 
   return (
     <div>
-      <ChatForm onSubmit={sendMessage} isPending={isPending} />
       <MessageList messages={messages} />
     </div>
   );
